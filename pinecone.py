@@ -1,7 +1,7 @@
 import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 import openai
-import pinecone
+import pinecone as p
 #from pinecone import init
 
 # set up OpenAI API
@@ -10,7 +10,7 @@ embed_model = "text-embedding-ada-002"
 
 # set up Pinecone
 index_name = "openai-youtube-transcriptions"
-pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
+p.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
 
 # define function to get transcript data
 def get_transcript_data(video_id):
