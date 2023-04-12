@@ -29,3 +29,11 @@ yt_video_id=youtube.video_id
 streams=youtube.streams.filter(only_audio=True)
 stream=streams.first()
 stream
+
+yt_published_date=youtube.publish_date
+stream.download(filename='output.mp4')
+model=whisper.load_model('base')
+
+out=model.transcribe('output_trimmed.mp4')
+
+#out['segments']
