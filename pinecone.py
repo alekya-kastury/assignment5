@@ -1,7 +1,7 @@
 import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 import openai
-import pinecone
+#import pinecone
 from pinecone import init
 
 # set up OpenAI API
