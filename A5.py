@@ -28,3 +28,16 @@ youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
 
 youtube=YouTube(youtube_video_url)
 
+duration=youtube.length
+
+yt_title = youtube.title
+
+yt_channel_id=youtube.channel_id
+
+yt_video_id=youtube.video_id
+
+youtube.from_id
+
+streams=youtube.streams.filter(only_audio=True)
+stream=streams.first()
+stream
