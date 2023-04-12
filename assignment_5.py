@@ -51,7 +51,7 @@ yt_published_date=youtube.publish_date
 
 stream.download(filename='output.mp4')
 
-!ffmpeg -ss 1 -i output.mp4 -t 3000 output_trimmed.mp4
+#!ffmpeg -ss 1 -i output.mp4 -t 3000 output_trimmed.mp4
 
 model=whisper.load_model('base')
 
