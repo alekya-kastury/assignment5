@@ -9,13 +9,13 @@ Original file is located at
 Assignment 5
 """
 import streamlit as st
-!pip install git+https://github.com/openai/whisper.git -q
+#!pip install git+https://github.com/openai/whisper.git -q
 
-!pip install ffmpeg-python
+#!pip install ffmpeg-python
 
-!pip install -qU openai pinecone-client datasets tqdm
+#!pip install -qU openai pinecone-client datasets tqdm
 
-!pip install pytube -q
+#!pip install pytube -q
 
 import urllib.request
 
