@@ -4,7 +4,7 @@ import openai
 import pinecone
 
 # set up OpenAI API
-openai.api_key = "YOUR_OPENAI_API_KEY"
+openai.api_key = st.secrets["open_api_key"]
 embed_model = "text-embedding-ada-002"
 
 # set up Pinecone
