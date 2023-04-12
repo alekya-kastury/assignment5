@@ -26,8 +26,6 @@ yt_channel_id=youtube.channel_id
 
 yt_video_id=youtube.video_id
 
-youtube.from_id
-
 streams=youtube.streams.filter(only_audio=True)
 stream=streams.first()
 stream
