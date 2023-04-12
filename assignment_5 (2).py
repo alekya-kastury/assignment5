@@ -8,7 +8,7 @@ Original file is located at
 
 Assignment 5
 """
-
+import streamlit as st
 pip install git+https://github.com/openai/whisper.git -q
 
 pip install ffmpeg-python
@@ -26,6 +26,10 @@ import pytube
 import whisper
 
 from pytube import YouTube
+
+st.title("Welcome")
+
+query = st.text_input("How can I assist you today?")
 
 youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
 
