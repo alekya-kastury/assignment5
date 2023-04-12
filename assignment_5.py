@@ -8,7 +8,8 @@ Original file is located at
 
 Assignment 5
 """
-!pip install --upgrade pip
+python -m pip install --upgrade pip
+
 
 import streamlit as st
 from whisper import load_model
