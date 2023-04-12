@@ -1,8 +1,8 @@
 import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
 import openai
-#import pinecone
-from pinecone import init
+import pinecone
+#from pinecone import init
 
 # set up OpenAI API
 openai.api_key = st.secrets["openai_api_key"]
