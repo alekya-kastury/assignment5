@@ -113,16 +113,17 @@ str(data[0]['published'])
 
 new_data[0]
 
-!pip install youtube_transcript_api 
-!pip install openai
-!pip install pinecone-client
+#!pip install youtube_transcript_api 
+#!pip install openai
+#!pip install pinecone-client
 
 from youtube_transcript_api import YouTubeTranscriptApi
 import openai
 import pinecone
 
 # set up OpenAI API
-openai.api_key = "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"
+openai.api_key = st.secrets["api_secret"]
+#openai.api_key = "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"
 embed_model = "text-embedding-ada-002"
 
 # set up Pinecone
