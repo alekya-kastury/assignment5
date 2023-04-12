@@ -13,11 +13,9 @@ pip install git+https://github.com/openai/whisper.git -q
 
 pip install ffmpeg-python
 
-!pip install -qU openai pinecone-client datasets tqdm
+pip install -qU openai pinecone-client datasets tqdm
 
-pip install --upgrade pip
-
-!pip install pytube -q
+pip install pytube -q
 
 import urllib.request
 
