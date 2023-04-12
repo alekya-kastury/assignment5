@@ -9,7 +9,7 @@ embed_model = "text-embedding-ada-002"
 
 # set up Pinecone
 index_name = "openai-youtube-transcriptions"
-pinecone.init(api_key="YOUR_PINECONE_API_KEY", environment="YOUR_PINECONE_ENVIRONMENT")
+pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
 
 # define function to get transcript data
 def get_transcript_data(video_id):
