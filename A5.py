@@ -32,7 +32,7 @@ stream
 
 yt_published_date=youtube.publish_date
 stream.download(filename='output.mp4')
-model=whisper.load_model('base')
+model = whisper.load_model(model_name='base')
 
 out=model.transcribe('output_trimmed.mp4')
 
