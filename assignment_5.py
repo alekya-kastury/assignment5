@@ -8,8 +8,11 @@ Original file is located at
 
 Assignment 5
 """
+!pip install --upgrade pip
+
 import streamlit as st
 from whisper import load_model
+
 #!pip install git+https://github.com/openai/whisper.git -q
 
 #!pip install ffmpeg-python
