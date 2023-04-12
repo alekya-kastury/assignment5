@@ -9,3 +9,4 @@ youtube-transcript-api
 openai
 pinecone-client
 whisper
+pytube
