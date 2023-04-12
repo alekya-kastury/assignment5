@@ -12,7 +12,7 @@ Assignment 5
 
 
 import streamlit as st
-from whisper import load_model
+#from whisper import load_model
 
 #!pip install git+https://github.com/openai/whisper.git -q
 
