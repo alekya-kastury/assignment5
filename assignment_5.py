@@ -8,7 +8,7 @@ Original file is located at
 
 Assignment 5
 """
-python -m pip install --upgrade pip
+#python -m pip install --upgrade pip
 
 
 import streamlit as st
