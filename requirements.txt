@@ -8,5 +8,5 @@ coverage==5.2.1
 youtube-transcript-api
 openai
 pinecone-client
-whisper==1.0.2
+https://github.com/openai/whisper.git
 pytube
