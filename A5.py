@@ -103,5 +103,5 @@ res = openai.Completion.create(
         stop=None
     )
 
-result=res['choices'][0]['text'].strip()
-st.write(result)
+res['choices'][0]['text'].strip()
+
