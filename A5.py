@@ -17,6 +17,21 @@ embed_model = "text-embedding-ada-002"
 # set up Pinecone
 index_name = "openai-youtube-transcriptions"
 pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
+# check if index already exists (it shouldn't if this is first time)
+
+if index_name not in pinecone.list_indexes():
+    # if does not exist, create index
+    pinecone.create_index(
+        index_name,
+        dimension=len(res['data'][0]['embedding']),
+        metric='cosine',
+        metadata_config={'indexed': ['channel_id', 'published']}
+    )
+# connect to index
+index = pinecone.Index(index_name)
+# view index stats
+index.describe_index_stats()
+
 
 #youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
 
