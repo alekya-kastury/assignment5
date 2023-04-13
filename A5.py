@@ -103,5 +103,7 @@ res = openai.Completion.create(
         stop=None
     )
 
-st.write(res['choices'][0]['text'].strip())
-
+try:
+    st.write(res['choices'][0]['text'].strip())
+except:
+    st.write("Please enter a query")
