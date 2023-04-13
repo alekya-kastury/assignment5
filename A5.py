@@ -103,5 +103,5 @@ res = openai.Completion.create(
         stop=None
     )
 
-st.dataframe(res['choices'][0]['text'].strip())
+st.table(res['choices'][0]['text'].strip())
 
