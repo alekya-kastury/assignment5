@@ -17,8 +17,17 @@ embed_model = "text-embedding-ada-002"
 # set up Pinecone
 index_name = "openai-youtube-transcriptions"
 pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
-# check if index already exists (it shouldn't if this is first time)
 
+#Data preparation 
+embed_model = "text-embedding-ada-002"
+
+data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
+data = YouTubeTranscriptApi.get_transcript('HeMIZC2rkMo')
+data = YouTubeTranscriptApi.get_transcript('uFUGJnKByx8')
+data = YouTubeTranscriptApi.get_transcript('D8ft1stIlCY')
+data = YouTubeTranscriptApi.get_transcript('s0CIXvpfv5o')
+
+# check if index already exists (it shouldn't if this is first time)
 if index_name not in pinecone.list_indexes():
     # if does not exist, create index
     pinecone.create_index(
@@ -31,16 +40,6 @@ if index_name not in pinecone.list_indexes():
 index = pinecone.Index(index_name)
 # view index stats
 index.describe_index_stats()
-
-
-#youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
-
-data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
-data = YouTubeTranscriptApi.get_transcript('HeMIZC2rkMo')
-data = YouTubeTranscriptApi.get_transcript('uFUGJnKByx8')
-data = YouTubeTranscriptApi.get_transcript('D8ft1stIlCY')
-data = YouTubeTranscriptApi.get_transcript('s0CIXvpfv5o')
-
 
 def get_transcript_data(video_id):
     data = YouTubeTranscriptApi.get_transcript(video_id)
