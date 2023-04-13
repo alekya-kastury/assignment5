@@ -104,6 +104,6 @@ res = openai.Completion.create(
     )
 
 try:
-    st.write(res['choices'][0]['text'])
+    st.write(res)
 except:
     st.write("Please enter a query")
