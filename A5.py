@@ -18,9 +18,13 @@ embed_model = "text-embedding-ada-002"
 index_name = "openai-youtube-transcriptions"
 pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
 
-youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
+#youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
 
 data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
+data = YouTubeTranscriptApi.get_transcript('HeMIZC2rkMo')
+data = YouTubeTranscriptApi.get_transcript('uFUGJnKByx8')
+data = YouTubeTranscriptApi.get_transcript('D8ft1stIlCY')
+data = YouTubeTranscriptApi.get_transcript('s0CIXvpfv5o')
 
 
 def get_transcript_data(video_id):
