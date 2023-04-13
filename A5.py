@@ -21,12 +21,6 @@ pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-ea
 #Data preparation 
 embed_model = "text-embedding-ada-002"
 
-data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
-data = YouTubeTranscriptApi.get_transcript('HeMIZC2rkMo')
-data = YouTubeTranscriptApi.get_transcript('uFUGJnKByx8')
-data = YouTubeTranscriptApi.get_transcript('D8ft1stIlCY')
-data = YouTubeTranscriptApi.get_transcript('s0CIXvpfv5o')
-
 # connect to index
 index = pinecone.Index(index_name)
 # view index stats
