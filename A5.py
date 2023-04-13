@@ -81,11 +81,16 @@ def get_transcript_data(video_id):
 #video_id='tmGDx9hVWwo'
 #transcript_data = get_transcript_data(video_id)
 
-def complete(prompt):
+#def complete(prompt):
     # query text-davinci-003
-    res = openai.Completion.create(
+
+st.title("Welcome")
+
+query = st.text_input("How can I assist you today?")
+
+res = openai.Completion.create(
         engine='text-davinci-003',
-        prompt=prompt,
+        prompt=query,
         temperature=0,
         max_tokens=400,
         top_p=1,
@@ -93,10 +98,5 @@ def complete(prompt):
         presence_penalty=0,
         stop=None
     )
-    return res['choices'][0]['text'].strip()
 
-st.title("Welcome")
-
-query = st.text_input("How can I assist you today?")
-
-st.write(query)
+st.write(res['choices'][0]['text'].strip())
