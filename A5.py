@@ -130,8 +130,6 @@ def retrieve(query):
 
 query_with_contexts = retrieve(query)
 
-st.write(query_with_contexts)
-
 res = openai.Completion.create(
         engine='text-davinci-003',
         prompt=query_with_contexts,
@@ -142,5 +140,5 @@ res = openai.Completion.create(
         presence_penalty=0,
         stop=None)
 
-#st.write(res)
+st.write(res)
 
