@@ -19,7 +19,6 @@ index_name = "openai-youtube-transcriptions"
 pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-east1-gcp")
 
 youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
-data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
 
 def get_transcript_data(video_id):
     data = YouTubeTranscriptApi.get_transcript(video_id)
@@ -76,6 +75,7 @@ def get_transcript_data(video_id):
 
     return new_data
 
+video_id='tmGDx9hVWwo'
 transcript_data = get_transcript_data(video_id)
 
 res = openai.Completion.create(
