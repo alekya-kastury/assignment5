@@ -89,7 +89,7 @@ def get_transcript_data(video_id):
 
 st.title("Welcome")
 
-query = st.text_input("How can I assist you today?")
+query = st.text_input("How can I assist you today?",value='Type something here')
 
 
 limit = 3750
