@@ -110,4 +110,4 @@ st.title("Welcome")
 
 query = st.text_input("How can I assist you today?")
 
-st.write(complete(query))
+#st.write(complete(query))
