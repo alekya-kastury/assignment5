@@ -90,7 +90,7 @@ def get_transcript_data(video_id):
 
 st.title("Welcome")
 
-query = st.text_input("How can I assist you today?")
+query1 = st.text_input("How can I assist you today?")
 
 
 limit = 3750
@@ -135,7 +135,7 @@ def retrieve(query):
             )
     return prompt
 
-query_with_contexts = retrieve(query)
+query_with_contexts = retrieve(query1)
 
 st.write(query_with_contexts)
 
@@ -147,8 +147,7 @@ res = openai.Completion.create(
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0,
-        stop=None
-    )
+        stop=None)
 
-st.write(res)
+#st.write(res)
 
