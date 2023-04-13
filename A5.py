@@ -96,15 +96,9 @@ def get_transcript_data(video_id):
 
     return new_data
 
-#video_id='tmGDx9hVWwo'
-#transcript_data = get_transcript_data(video_id)
-
-#def complete(prompt):
-    # query text-davinci-003
-
 st.title("Welcome")
 
-query1 = st.text_input("How can I assist you today?")
+query = st.text_input("How can I assist you today?")
 
 
 limit = 3750
@@ -149,7 +143,7 @@ def retrieve(query):
             )
     return prompt
 
-query_with_contexts = retrieve(query1)
+query_with_contexts = retrieve(query)
 
 st.write(query_with_contexts)
 
