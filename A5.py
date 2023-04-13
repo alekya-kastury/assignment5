@@ -20,6 +20,9 @@ pinecone.init(api_key="245cbb4a-88ac-4794-a455-a39588737f92", environment="us-ea
 
 youtube_video_url='https://www.youtube.com/watch?v=tmGDx9hVWwo'
 
+data = YouTubeTranscriptApi.get_transcript('tmGDx9hVWwo')
+st.write(data[0]['title'])
+
 def get_transcript_data(video_id):
     data = YouTubeTranscriptApi.get_transcript(video_id)
     new_data = []
@@ -75,8 +78,8 @@ def get_transcript_data(video_id):
 
     return new_data
 
-video_id='tmGDx9hVWwo'
-transcript_data = get_transcript_data(video_id)
+#video_id='tmGDx9hVWwo'
+#transcript_data = get_transcript_data(video_id)
 
 res = openai.Completion.create(
     engine='text-davinci-003',
